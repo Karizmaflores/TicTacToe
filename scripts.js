@@ -10,8 +10,6 @@
 let currentMarker = 'X'
 
 
-
-
 // this "handleClick" function is called when a box is clicked. Here, "element" will hold the same value as "this" does in the HTML. 
 // "this" is a special word in JS but "element" could have been "thing" or "el" or whatever we wanted it to be as long as we use it again in the "console.log" statement
 const handleClick = (element) => {
@@ -27,15 +25,6 @@ const handleClick = (element) => {
 }
 
 
-
-
-
-
-
-
-
-
-
 // this function places the "currentMarker" inside the HTML element that was clicked and calls the "changeMarker" function.
 const addMarker = (id) => {
 
@@ -44,27 +33,21 @@ const addMarker = (id) => {
   console.log(`Therefore, a  "${currentMarker}"  should be placed in the square with the id:  ${id}`)
   
   // @TODO-2: Build a line of code that will set the innerHTML property of the element that was clicked to the "currentMarker"
-  
+  document.getElementById(id).innerHTML = currentMarker;
   // @TODO-2.5: MIX & MATCH, You will need the following pieces of code to build that line:
   // = currentMarker
   // .getElementById(id)
   // document
   // .innerHTML 
-
+ 
   changeMarker()
 }
 
 
-
-
-
-
-
-
-
-
 // This "changeMarker" function changes "X" to "O" in the "currentMarker" variable or "O" to "X"
 const changeMarker = () => {
+  console.log('currentMarker:', currentMarker)
+  console.log('currentMarker == "X": ', currentMarker =="X")
   if(currentMarker === "X"){
     currentMarker = "O"
   } else {
@@ -73,17 +56,11 @@ const changeMarker = () => {
 }
 
 
-
-
-
-
-
-
-
-
 // This "resetBoard" function is called when the user clicks on the "Restart" button.
 const resetBoard = () => {
-  
+
+  const squares = document.getElementsByTagName("TD");
+
   // @TODO-3: To make your "Restart" button work you'll need to build a line of code here that:
       // collects all of the "td" elements into an HTML Collection: https://www.w3schools.com/jsref/dom_obj_htmlcollection.asp  
     
@@ -102,5 +79,7 @@ const resetBoard = () => {
 
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
-  }  
+
+  currentMarker = "X"
+  }
 }

@@ -1,16 +1,37 @@
 .jumbotron {
   margin: 5% auto;
-  margin-left: 43%;
+}
+
+body {
+  background-color: rgb(51, 1, 91);
 }
 
 td {
   height:150px;
   width:150px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid rgb(22, 255, 22);
   font-size: 100px;
 }
 
 table {
   margin: auto auto;
+}
+
+h1 {
+  font-family: 'Creepster';
+  color: rgb(22, 255, 22);
+  text-align: center;
+  font-size: 40px;
+}
+
+p {
+  color: orangered;
+  text-align: center;
+}
+
+button {
+  background-color: orangered;
+  color: rgb(0, 0, 0);
+  margin-left: 46%;
 }
