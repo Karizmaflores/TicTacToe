@@ -160,7 +160,7 @@ const resetBoard = () => {
   // const
   
   // loops over the HTML Collection of TDs and clears out the Xs and Os
-  for (i=0; i < squares.length; i++) {
+  for (i = 0; i <= squares.length; i++) {
 
     // will log out the id of each square as it loops over them.
     console.log(squares[i].id)
